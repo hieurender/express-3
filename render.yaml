@@ -8,16 +8,5 @@ services:
     buildCommand: yarn
     startCommand: node app.js
     envVars:
-      # Will not be copied!
-      # Value for MY_API_KEY provided in dashboard will not be copied to preview environments
-      - key: MY_API_KEY
-        sync: false
-      # Will be copied
-      # USER_PROVIDED_SECRET will be copied to preview environments
-      - fromGroup: all-settings-2
-
-envVarGroups:
-- name: all-settings-2
-  envVars:
-    - key: USER_PROVIDED_SECRET
-      sync: false
+      - fromGroup: prod-vars-1
+        previewGroup: staging-vars-1
