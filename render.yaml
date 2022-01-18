@@ -4,7 +4,7 @@ services:
   - type: web
     name: iac-test-3
     env: node
-    repo: https://github.com/hieurender/express-hello-world
+    repo: https://github.com/hieurender/express-3
     buildCommand: yarn
     startCommand: node app.js
     envVars:
