@@ -15,5 +15,5 @@ services:
     env: static
     buildCommand: yarn build
     staticPublishPath: ./build
-    repo: https://github.com/hieurender/create-react-app
+    repo: https://github.com/hieurender/cra2
     branch: master
