@@ -10,3 +10,10 @@ services:
     envVars:
       - fromGroup: prod-vars-1
         previewGroup: staging-vars-1
+  - type: web
+    name: static-iac
+    env: static
+    buildCommand: yarn build
+    staticPublishPath: ./build
+    repo: https://github.com/hieurender/create-react-app
+    branch: master
