@@ -4,7 +4,7 @@ services:
   - type: web
     name: iac-test-3
     env: node
-    repo: https://github.com/hieurender/express-3
+    repo: https://github.com/hieurender/express-2
     buildCommand: yarn
     startCommand: node app.js
     envVars:
@@ -17,3 +17,20 @@ services:
     staticPublishPath: ./build
     repo: https://github.com/hieurender/cra2
     branch: master
+  - type: pserv
+    name: docker-iac
+    env: docker
+    repo: https://github.com/hieurender/mysql
+    envVars:
+      - key: MYSQL_DATABASE
+        value: mysql
+      - key: MYSQL_USER
+        value: mysql
+      - key: MYSQL_PASSWORD
+        value: password
+      - key: MYSQL_ROOT_PASSWORD
+        value: password
+    disk:
+      name: mysql
+      mountPath: /var/lib/mysql
+      sizeGB: 10
