@@ -20,7 +20,7 @@ services:
   - type: pserv
     name: docker-iac
     env: docker
-    repo: https://github.com/hieurender/mysql
+    repo: https://github.com/hieurender/mysql-2
     envVars:
       - key: MYSQL_DATABASE
         value: mysql
