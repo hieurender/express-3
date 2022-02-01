@@ -4,6 +4,7 @@ services:
   - type: web
     name: iac-test-3
     env: node
+    autoDeploy: false
     repo: https://github.com/hieurender/express-2
     buildCommand: yarn
     startCommand: node app.js
@@ -13,11 +14,13 @@ services:
   - type: web
     name: static-iac
     env: static
+    autoDeploy: false
     buildCommand: yarn build
     staticPublishPath: ./build
     repo: https://github.com/hieurender/cra2
     branch: master
   - type: pserv
+    autoDeploy: false
     name: docker-iac
     env: docker
     repo: https://github.com/hieurender/mysql-2
