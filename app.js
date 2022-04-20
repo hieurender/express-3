@@ -16,5 +16,5 @@ app.listen(port, () => {
     console.log('UDP Server is listening at port', port);
   });
 
-  server.bind(2222);
+  server.bind(port);
 });
